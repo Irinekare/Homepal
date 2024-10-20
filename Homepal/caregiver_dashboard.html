@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caregiver Dashboard - HomePal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Caregiver Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patient_dashboard.html">Patient Dashboard</a></li>
+                    <li><a href="doctors_dashboard.html">Doctor Dashboard</a></li>
+                    <li><a href="sign_in.html">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Monitor Patient Progress</h2>
+            <div id="patient-monitoring">
+                <!-- Placeholder for patient monitoring data -->
+                <p>Loading patient progress...</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Manage Tasks</h2>
+            <form id="task-management-form">
+                <div class="form-group">
+                    <label for="task-description">Task Description:</label>
+                    <input type="text" id="task-description" name="task-description" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-status">Status:</label>
+                    <select id="task-status" name="task-status">
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <button type="submit">Update Task</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HomePal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

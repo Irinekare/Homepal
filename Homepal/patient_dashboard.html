@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - HomePal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Patient Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patient_dashboard.html">Patient Dashboard</a></li>
+                    <li><a href="doctors_dashboard.html">Doctor Dashboard</a></li>
+                    <li><a href="caregiver_dashboard.html">Caregiver Dashboard</a></li>
+                    <li><a href="sign_in.html">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Enter Your Health Data</h2>
+            <form id="health-form">
+                <div class="form-group">
+                    <label for="bp">Blood Pressure (mmHg):</label>
+                    <input type="text" id="bp" name="bp" placeholder="e.g. 120/80" required>
+                </div>
+                <div class="form-group">
+                    <label for="glucose">Blood Glucose Level (mg/dL):</label>
+                    <input type="text" id="glucose" name="glucose" placeholder="e.g. 90" required>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="text" id="weight" name="weight" placeholder="e.g. 60" required>
+                </div>
+                <div class="form-group">
+                    <label for="bp">Height (m):</label>
+                    <input type="text" id="height" name="height" placeholder="e.g. 160" required>
+                </div>
+            <a href=""></a><button type="submit">Submit</button>
+            </form>
+        </section>
+        <section>
+          <div class="feature-cards">
+    <a href="diabetis.html" class="card">
+        <h3>Diabetes</h3>
+        <p>Manage and track your blood sugar levels, receive reminders for medication, and schedule regular check-ups for a healthier lifestyle.</p>
+    </a>
+    <a href="hypertension.html" class="card">
+        <h3>Hypertension</h3>
+        <p>Monitor your blood pressure regularly, get notified of important health updates, and maintain a schedule for doctor's visits and medication.</p>
+    </a>
+</div>  
+        </section>
+        
+
+
+
+        <section>
+            <h2>Your Recent Data</h2>
+            <div id="data-display">
+                <!-- Display recent health data here -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Schedule an Appointment</h2>
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="appointment-date">Choose a date:</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                </div>
+                <button type="submit">Schedule</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HomePal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

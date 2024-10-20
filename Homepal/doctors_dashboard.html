@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - HomePal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Doctor Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patient_dashboard.html">Patient Dashboard</a></li>
+                    <li><a href="caregiver_dashboard.html">Caregiver Dashboard</a></li>
+                    <li><a href="sign_in.html">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Patient Health Data</h2>
+            <div id="patient-data">
+                <!-- Placeholder for patient health data -->
+                <p>Loading patient data...</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Manage Appointments</h2>
+            <form id="appointment-management-form">
+                <div class="form-group">
+                    <label for="patient-name">Patient Name:</label>
+                    <input type="text" id="patient-name" name="patient-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-status">Status:</label>
+                    <select id="appointment-status" name="appointment-status">
+                        <option value="scheduled">Scheduled</option>
+                        <option value="completed">Completed</option>
+                        <option value="canceled">Canceled</option>
+                    </select>
+                </div>
+                <button type="submit">Update Status</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HomePal</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePal - Hypertension Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .content {
+            margin: 40px;
+        }
+
+        .slide-container {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hypertension-slide {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .hypertension-slide h2 {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .hypertension-slide p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        #data-display table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        #data-display th, #data-display td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #data-display th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #data-display tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        #data-display tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HomePal - Hypertension Management</h1>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patient_dashboard.html">Patient Dashboard</a></li>
+                    <li><a href="sign_in.html">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="slide-container">
+            <div class="hypertension-slide">
+                <h2>Hypertension Management</h2>
+                <p>Track your blood pressure and heart rate to ensure your health is well-managed. Below is your recent data:</p>
+
+                <section>
+                    <h2>Your Recent Data</h2>
+                    <div id="data-display">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Blood Pressure (mmHg)</th>
+                                    <th>Heart Rate (bpm)</th>
+                                    <th>Medication Taken</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-10-20</td>
+                                    <td>135/85</td>
+                                    <td>78</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-10-19</td>
+                                    <td>140/90</td>
+                                    <td>80</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-10-18</td>
+                                    <td>138/88</td>
+                                    <td>76</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-10-17</td>
+                                    <td>145/92</td>
+                                    <td>82</td>
+                                    <td>Yes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

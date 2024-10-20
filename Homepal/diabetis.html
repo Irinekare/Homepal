@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePal - Diabetes Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2196F3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .content {
+            margin: 40px;
+        }
+
+        .tab {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab button {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .tab button.active {
+            background-color: #0D47A1;
+        }
+
+        .tab button:hover {
+            background-color: #0D47A1;
+        }
+
+        .tabcontent {
+            display: none;
+        }
+
+        .tabcontent.active {
+            display: block;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .status-good {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-bad {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HomePal - Diabetes Management</h1>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="patient_dashboard.html">Patient Dashboard</a></li>
+                    <li><a href="sign_in.html">Log out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Monitor Your Insulin Levels</h2>
+        <p>Check your blood sugar levels to ensure you're managing your diabetes effectively. Below are your recent RBS and FBS trends.</p>
+
+        <div class="tab">
+            <button class="tablink active" onclick="openTab(event, 'RBS')">Random Blood Sugar (RBS)</button>
+            <button class="tablink" onclick="openTab(event, 'FBS')">Fasting Blood Sugar (FBS)</button>
+        </div>
+
+        <!-- RBS Tab -->
+        <div id="RBS" class="tabcontent active">
+            <h3>Random Blood Sugar (RBS) Trends</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Blood Sugar (mg/dL)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-10-20</td>
+                        <td>160</td>
+                        <td class="status-good">Normal</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-19</td>
+                        <td>220</td>
+                        <td class="status-bad">High</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-18</td>
+                        <td>180</td>
+                        <td class="status-good">Normal</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-17</td>
+                        <td>240</td>
+                        <td class="status-bad">High</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- FBS Tab -->
+        <div id="FBS" class="tabcontent">
+            <h3>Fasting Blood Sugar (FBS) Trends</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Blood Sugar (mg/dL)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-10-20</td>
+                        <td>90</td>
+                        <td class="status-good">Normal</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-19</td>
+                        <td>120</td>
+                        <td class="status-bad">High</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-18</td>
+                        <td>95</td>
+                        <td class="status-good">Normal</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-17</td>
+                        <td>130</td>
+                        <td class="status-bad">High</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+
+        // Initialize with the RBS tab open
+        document.getElementById("RBS").style.display = "block";
+        document.getElementById("RBS").classList.add("active");
+    </script>
+
+</body>
+</html>
